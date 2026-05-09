@@ -211,42 +211,81 @@
   #wall { padding: 120px 0; background: var(--white); }
   .wall-header { text-align: center; margin-bottom: 56px; }
   .wall-header .section-tag { background: rgba(231,76,60,0.10); color: var(--red); }
-  .wall-layout { display: grid; grid-template-columns: minmax(300px, 420px) 1fr; gap: 40px; align-items: start; }
+  .wall-layout { display: grid; grid-template-columns: minmax(300px, 380px) 1fr; gap: 40px; align-items: start; }
   .wall-form-wrap { position: sticky; top: 100px; }
-  .wall-form { background: var(--gray-light); border-radius: var(--radius); padding: 36px 32px; }
-  .wall-form h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--blue); margin-bottom: 12px; }
-  .video-studio-hint { font-size: 0.84rem; color: var(--gray); line-height: 1.55; margin-bottom: 22px; }
-  .form-group { margin-bottom: 18px; }
-  .form-group label { display: block; font-size: 0.83rem; font-weight: 600; color: var(--blue); margin-bottom: 8px; }
-  .form-group input { width: 100%; background: white; border: 1.5px solid #e8e8e4; border-radius: var(--radius-sm); padding: 13px 16px; font-size: 0.92rem; font-family: 'DM Sans', sans-serif; color: var(--blue); transition: border-color 0.2s, box-shadow 0.2s; }
-  .form-group input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(39,174,96,0.12); }
-  .video-preview-shell { position: relative; background: #1a1a1a; border-radius: var(--radius-sm); overflow: hidden; aspect-ratio: 16 / 10; margin-bottom: 16px; border: 2px solid #e8e8e4; }
-  .video-preview-shell video { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .video-preview-shell.has-video .video-preview-placeholder { display: none; }
-  .video-preview-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: rgba(255,255,255,0.45); font-size: 0.82rem; text-align: center; padding: 20px; pointer-events: none; }
-  .video-preview-placeholder svg { width: 2.5rem; height: 2.5rem; stroke: rgba(255,255,255,0.35); }
-  .recording-indicator { display: none; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 700; color: var(--red); margin-bottom: 10px; letter-spacing: 0.06em; }
-  .recording-indicator.is-live { display: flex; }
-  .recording-indicator .rec-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: recPulse 1s ease-in-out infinite; }
-  @keyframes recPulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.85); } }
-  .video-toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
-  .btn-wall-outline { flex: 1; min-width: 130px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--blue); background: white; color: var(--blue); font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
-  .btn-wall-outline:hover { background: var(--blue); color: white; }
-  .btn-wall-outline:disabled { opacity: 0.45; cursor: not-allowed; }
-  .btn-wall-outline svg { width: 1rem; height: 1rem; stroke: currentColor; flex-shrink: 0; }
-  .camera-record-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
-  .btn-wall-record { padding: 11px 18px; border-radius: 100px; border: none; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; }
-  .btn-wall-record.start { background: var(--red); color: white; box-shadow: 0 4px 14px rgba(231,76,60,0.35); }
-  .btn-wall-record.start:hover { transform: translateY(-2px); }
-  .btn-wall-record.stop { background: var(--blue); color: white; }
-  .btn-wall-record:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
-  .btn-wall-record svg { width: 1rem; height: 1rem; stroke: currentColor; }
-  .wall-submit { width: 100%; padding: 15px; border-radius: 100px; background: linear-gradient(135deg, var(--red) 0%, #c0392b 100%); color: white; border: none; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: var(--transition); box-shadow: 0 6px 20px rgba(231,76,60,0.35); display: flex; align-items: center; justify-content: center; gap: 10px; }
-  .wall-submit:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(231,76,60,0.45); }
-  .wall-submit:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
-  .btn-wall-ghost { width: 100%; margin-top: 10px; padding: 11px; border-radius: 100px; border: 1.5px solid #d8d8d4; background: transparent; color: var(--gray); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
-  .btn-wall-ghost:hover { border-color: var(--blue); color: var(--blue); }
-  .btn-wall-ghost svg { width: 1rem; height: 1rem; stroke: currentColor; }
+  .wall-form { background: var(--gray-light); border-radius: var(--radius); padding: 32px 28px; }
+  .wall-form h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--blue); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .wall-form h3 svg { width: 1.25rem; height: 1.25rem; stroke: var(--red); flex-shrink: 0; }
+
+  /* Bouton caméra principal */
+  .btn-open-camera-main { width: 100%; padding: 18px; border-radius: var(--radius-sm); border: 2px dashed rgba(44,62,80,0.25); background: white; color: var(--blue); font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: var(--transition); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+  .btn-open-camera-main:hover { border-color: var(--red); color: var(--red); background: rgba(231,76,60,0.04); }
+  .btn-open-camera-main svg { width: 2.2rem; height: 2.2rem; stroke: currentColor; }
+  .btn-open-camera-main span { font-size: 0.82rem; color: var(--gray); font-weight: 400; }
+
+  /* Overlay plein écran style TikTok */
+  .tiktok-overlay { display: none; position: fixed; inset: 0; z-index: 2000; background: #000; flex-direction: column; }
+  .tiktok-overlay.active { display: flex; }
+  .tiktok-video-wrap { position: relative; flex: 1; overflow: hidden; }
+  .tiktok-video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* Barre supérieure overlay */
+  .tiktok-top-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 10; padding: 20px 20px 0; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 100%); }
+  .tiktok-top-bar-title { color: white; font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; }
+  .tiktok-btn-cancel { background: rgba(255,255,255,0.15); border: none; border-radius: 100px; padding: 10px 20px; color: white; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; backdrop-filter: blur(6px); transition: background 0.2s; }
+  .tiktok-btn-cancel:hover { background: rgba(255,255,255,0.25); }
+  .tiktok-btn-cancel svg { width: 1rem; height: 1rem; stroke: white; }
+
+  /* Indicateur REC */
+  .tiktok-rec-badge { position: absolute; top: 72px; left: 50%; transform: translateX(-50%); display: none; align-items: center; gap: 8px; background: rgba(231,76,60,0.9); color: white; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; padding: 6px 16px; border-radius: 100px; backdrop-filter: blur(4px); }
+  .tiktok-rec-badge.is-live { display: flex; }
+  .tiktok-rec-badge .rec-dot { width: 7px; height: 7px; border-radius: 50%; background: white; animation: recPulse 1s ease-in-out infinite; }
+  @keyframes recPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  /* Barre inférieure overlay — état caméra live */
+  .tiktok-bottom-bar { position: absolute; bottom: 0; left: 0; right: 0; z-index: 10; padding: 0 24px 40px; background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%); }
+  .tiktok-controls-record { display: flex; align-items: center; justify-content: space-between; }
+  .tiktok-timer { color: rgba(255,255,255,0.8); font-size: 0.88rem; font-weight: 600; font-variant-numeric: tabular-nums; min-width: 48px; }
+  .tiktok-shutter { width: 72px; height: 72px; border-radius: 50%; border: 4px solid white; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.15s; position: relative; }
+  .tiktok-shutter:hover { transform: scale(1.06); }
+  .tiktok-shutter-inner { width: 52px; height: 52px; border-radius: 50%; background: var(--red); transition: border-radius 0.2s, width 0.2s, height 0.2s; }
+  .tiktok-shutter.recording .tiktok-shutter-inner { border-radius: 8px; width: 28px; height: 28px; }
+  .tiktok-shutter-hint { color: rgba(255,255,255,0.65); font-size: 0.75rem; text-align: center; min-width: 48px; }
+
+  /* Barre inférieure overlay — état lecture après enregistrement */
+  .tiktok-controls-review { display: none; align-items: center; justify-content: space-between; gap: 12px; }
+  .tiktok-controls-review.visible { display: flex; }
+  .tiktok-btn-retake { flex: 1; padding: 14px; border-radius: 100px; border: 1.5px solid rgba(255,255,255,0.5); background: transparent; color: white; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.2s; }
+  .tiktok-btn-retake:hover { background: rgba(255,255,255,0.12); }
+  .tiktok-btn-retake svg { width: 1rem; height: 1rem; stroke: white; }
+  .tiktok-btn-next { flex: 1; padding: 14px; border-radius: 100px; border: none; background: var(--green); color: white; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 18px rgba(39,174,96,0.45); transition: var(--transition); }
+  .tiktok-btn-next:hover { background: var(--green-dark); transform: translateY(-2px); }
+  .tiktok-btn-next svg { width: 1rem; height: 1rem; stroke: white; }
+
+  /* Modale de publication */
+  .publish-modal-overlay { display: none; position: fixed; inset: 0; z-index: 3000; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px); }
+  .publish-modal-overlay.active { display: flex; }
+  .publish-modal { background: white; border-radius: var(--radius); padding: 40px 36px; width: 100%; max-width: 460px; box-shadow: var(--shadow-lg); animation: modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1); }
+  @keyframes modalIn { from { opacity: 0; transform: scale(0.92) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+  .publish-modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+  .publish-modal-header h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--blue); }
+  .publish-modal-close { background: none; border: none; cursor: pointer; color: var(--gray); padding: 4px; border-radius: 8px; transition: color 0.2s; }
+  .publish-modal-close:hover { color: var(--blue); }
+  .publish-modal-close svg { width: 1.3rem; height: 1.3rem; stroke: currentColor; }
+  .publish-modal-preview { border-radius: var(--radius-sm); overflow: hidden; background: #111; margin-bottom: 24px; aspect-ratio: 16/9; }
+  .publish-modal-preview video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .publish-modal .form-group { margin-bottom: 20px; }
+  .publish-modal .form-group label { display: block; font-size: 0.83rem; font-weight: 600; color: var(--blue); margin-bottom: 8px; }
+  .publish-modal .form-group input { width: 100%; background: var(--gray-light); border: 1.5px solid #e8e8e4; border-radius: var(--radius-sm); padding: 13px 16px; font-size: 0.92rem; font-family: 'DM Sans', sans-serif; color: var(--blue); transition: border-color 0.2s, box-shadow 0.2s; }
+  .publish-modal .form-group input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(39,174,96,0.12); }
+  .publish-modal-actions { display: flex; gap: 12px; }
+  .btn-modal-cancel { flex: 1; padding: 14px; border-radius: 100px; border: 1.5px solid #d8d8d4; background: transparent; color: var(--gray); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
+  .btn-modal-cancel:hover { border-color: var(--blue); color: var(--blue); }
+  .btn-modal-publish { flex: 2; padding: 14px; border-radius: 100px; border: none; background: linear-gradient(135deg, var(--red) 0%, #c0392b 100%); color: white; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: var(--transition); box-shadow: 0 6px 20px rgba(231,76,60,0.35); display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .btn-modal-publish:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(231,76,60,0.45); }
+  .btn-modal-publish svg { width: 1.1rem; height: 1.1rem; stroke: white; }
+
+  /* Feed vidéo */
   .wall-feed { display: flex; flex-direction: column; gap: 18px; max-height: 780px; overflow-y: auto; padding-right: 6px; }
   .wall-feed::-webkit-scrollbar { width: 4px; }
   .wall-feed::-webkit-scrollbar-track { background: var(--gray-light); border-radius: 4px; }
@@ -693,47 +732,17 @@
     <div class="wall-header reveal">
       <span class="section-tag icon-tag"><i data-lucide="video"></i> Hommage vidéo</span>
       <h2 class="section-title">Vidéos du Cœur</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Filmé ou importé depuis votre galerie : une vidéo courte en hommage à vos parents. Pas de texte à rédiger — votre voix et votre sincérité suffisent.</p>
+      <p class="section-subtitle" style="margin:0 auto;">Filmez un court hommage à vos parents directement depuis votre caméra. Votre voix et votre sincérité suffisent.</p>
     </div>
     <div class="wall-layout">
       <div class="wall-form-wrap reveal">
         <div class="wall-form">
           <h3><i data-lucide="video"></i> Votre vidéo hommage</h3>
-          <p class="video-studio-hint">Autorisez la caméra pour enregistrer, ou choisissez une vidéo déjà enregistrée sur votre téléphone ou ordinateur.</p>
-          <div class="form-group">
-            <label>Votre prénom (optionnel)</label>
-            <input type="text" id="videoAuthorName" placeholder="Ex. Koffi, Marie…" autocomplete="name">
-          </div>
-          <input type="file" id="videoFileInput" accept="video/*" hidden>
-          <div class="video-preview-shell" id="videoPreviewShell">
-            <video id="wallPreviewVideo" playsinline></video>
-            <div class="video-preview-placeholder" id="videoPreviewPlaceholder">
-              <i data-lucide="film"></i>
-              <span>Aperçu de votre vidéo</span>
-            </div>
-          </div>
-          <div class="recording-indicator" id="recordingIndicator" aria-live="polite"><span class="rec-dot"></span> ENREGISTREMENT</div>
-          <div class="video-toolbar">
-            <button type="button" class="btn-wall-outline" id="btnPickVideo" title="Importer une vidéo">
-              <i data-lucide="upload"></i> Galerie / Fichier
-            </button>
-            <button type="button" class="btn-wall-outline" id="btnOpenCamera" title="Utiliser la caméra">
-              <i data-lucide="camera"></i> Caméra
-            </button>
-          </div>
-          <div class="camera-record-row" id="cameraRecordRow" hidden>
-            <button type="button" class="btn-wall-record start" id="btnStartRecord" disabled>
-              <i data-lucide="circle"></i> Enregistrer
-            </button>
-            <button type="button" class="btn-wall-record stop" id="btnStopRecord" disabled>
-              <i data-lucide="square"></i> Arrêter
-            </button>
-          </div>
-          <button type="button" class="wall-submit" id="btnPublishVideo" disabled>
-            <i data-lucide="send"></i> Publier la vidéo
-          </button>
-          <button type="button" class="btn-wall-ghost" id="btnResetVideoDraft">
-            <i data-lucide="rotate-ccw"></i> Recommencer
+          <!-- Bouton unique : ouvrir la caméra plein écran -->
+          <button type="button" class="btn-open-camera-main" id="btnOpenCamera">
+            <i data-lucide="camera"></i>
+            Prendre une vidéo
+            <span>Appuyez pour ouvrir la caméra</span>
           </button>
         </div>
       </div>
@@ -939,6 +948,67 @@
   </div>
 </footer>
 
+<!-- OVERLAY CAMÉRA PLEIN ÉCRAN (style TikTok) -->
+<div class="tiktok-overlay" id="tiktokOverlay" role="dialog" aria-modal="true" aria-label="Enregistrement vidéo">
+  <div class="tiktok-video-wrap">
+    <video id="tiktokLiveVideo" playsinline muted autoplay></video>
+    <!-- Barre supérieure -->
+    <div class="tiktok-top-bar">
+      <span class="tiktok-top-bar-title">Hommage à mes parents</span>
+      <button type="button" class="tiktok-btn-cancel" id="tiktokBtnCancel">
+        <i data-lucide="x"></i> Annuler
+      </button>
+    </div>
+    <!-- Badge REC -->
+    <div class="tiktok-rec-badge" id="tiktokRecBadge"><span class="rec-dot"></span> REC</div>
+    <!-- Barre inférieure -->
+    <div class="tiktok-bottom-bar">
+      <!-- Contrôles enregistrement -->
+      <div class="tiktok-controls-record" id="tiktokControlsRecord">
+        <span class="tiktok-timer" id="tiktokTimer">0:00</span>
+        <button type="button" class="tiktok-shutter" id="tiktokShutter" aria-label="Démarrer / Arrêter l'enregistrement">
+          <div class="tiktok-shutter-inner"></div>
+        </button>
+        <span class="tiktok-shutter-hint">Appuyer</span>
+      </div>
+      <!-- Contrôles relecture -->
+      <div class="tiktok-controls-review" id="tiktokControlsReview">
+        <button type="button" class="tiktok-btn-retake" id="tiktokBtnRetake">
+          <i data-lucide="rotate-ccw"></i> Reprendre
+        </button>
+        <button type="button" class="tiktok-btn-next" id="tiktokBtnNext">
+          Suivant <i data-lucide="arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODALE DE PUBLICATION -->
+<div class="publish-modal-overlay" id="publishModalOverlay" role="dialog" aria-modal="true" aria-label="Publier votre vidéo">
+  <div class="publish-modal">
+    <div class="publish-modal-header">
+      <h3>Publier votre hommage</h3>
+      <button type="button" class="publish-modal-close" id="publishModalClose" aria-label="Fermer">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="publish-modal-preview">
+      <video id="publishPreviewVideo" controls playsinline></video>
+    </div>
+    <div class="form-group">
+      <label for="videoAuthorName">Votre prénom (optionnel)</label>
+      <input type="text" id="videoAuthorName" placeholder="Ex. Koffi, Marie…" autocomplete="name">
+    </div>
+    <div class="publish-modal-actions">
+      <button type="button" class="btn-modal-cancel" id="publishModalCancel">Annuler</button>
+      <button type="button" class="btn-modal-publish" id="btnPublishVideo">
+        <i data-lucide="send"></i> Publier
+      </button>
+    </div>
+  </div>
+</div>
+
 <script>
 function refreshLucideIcons() {
   if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
@@ -1011,22 +1081,24 @@ function showToast(msg, type = 'success') {
   setTimeout(() => t.classList.remove('show'), 3000);
 }
 
-// ===== MUR VIDÉO (caméra + galerie + IndexedDB) =====
+// ===== MUR VIDÉO — EXPÉRIENCE TIKTOK =====
 const wallVideoBlobs = new Map();
 const VIDEO_DB_NAME = 'bfm-video-wall';
 const VIDEO_STORE = 'videos';
 let videoDB = null;
-let wallCameraStream = null;
-let wallMediaRecorder = null;
-let wallRecordedChunks = [];
-let wallDraftBlob = null;
-let wallDraftPreviewUrl = null;
+let tiktokStream = null;
+let tiktokMediaRecorder = null;
+let tiktokChunks = [];
+let tiktokDraftBlob = null;
+let tiktokDraftUrl = null;
+let tiktokRecording = false;
+let tiktokTimerInterval = null;
+let tiktokElapsed = 0;
 let wallRecordMime = 'video/webm';
-const WALL_MAX_IMPORT_MB = 120;
 
+/* ---- IndexedDB ---- */
 function wallTimeLabel(ts) {
-  const now = Date.now();
-  const diff = Math.floor((now - ts) / 1000);
+  const diff = Math.floor((Date.now() - ts) / 1000);
   if (diff < 60) return 'à l\'instant';
   if (diff < 3600) return `il y a ${Math.floor(diff / 60)} min`;
   if (diff < 86400) return `il y a ${Math.floor(diff / 3600)} h`;
@@ -1041,13 +1113,9 @@ function openWallVideoDB() {
       const db = req.result;
       if (!db.objectStoreNames.contains(VIDEO_STORE)) db.createObjectStore(VIDEO_STORE, { keyPath: 'id' });
     };
-    req.onsuccess = () => {
-      videoDB = req.result;
-      resolve(videoDB);
-    };
+    req.onsuccess = () => { videoDB = req.result; resolve(videoDB); };
   });
 }
-
 function wallSaveRecord(rec) {
   return new Promise((resolve, reject) => {
     const tx = videoDB.transaction(VIDEO_STORE, 'readwrite');
@@ -1056,7 +1124,6 @@ function wallSaveRecord(rec) {
     tx.onerror = () => reject(tx.error);
   });
 }
-
 function wallGetAllRecords() {
   return new Promise((resolve, reject) => {
     const tx = videoDB.transaction(VIDEO_STORE, 'readonly');
@@ -1065,253 +1132,184 @@ function wallGetAllRecords() {
     q.onerror = () => reject(q.error);
   });
 }
-
 function wallUpdateLikes(id, likes) {
   return new Promise((resolve, reject) => {
     const tx = videoDB.transaction(VIDEO_STORE, 'readwrite');
     const store = tx.objectStore(VIDEO_STORE);
     const g = store.get(id);
-    g.onsuccess = () => {
-      const rec = g.result;
-      if (rec) {
-        rec.likes = likes;
-        store.put(rec);
-      }
-    };
+    g.onsuccess = () => { if (g.result) { g.result.likes = likes; store.put(g.result); } };
     g.onerror = () => reject(g.error);
     tx.oncomplete = () => resolve();
     tx.onerror = () => reject(tx.error);
   });
 }
-
 function pickRecorderMime() {
   if (typeof MediaRecorder === 'undefined') return '';
   const opts = ['video/webm;codecs=vp9,opus', 'video/webm;codecs=vp8,opus', 'video/webm', 'video/mp4'];
-  for (const t of opts) {
-    if (MediaRecorder.isTypeSupported(t)) return t;
-  }
+  for (const t of opts) { if (MediaRecorder.isTypeSupported(t)) return t; }
   return '';
 }
+function fmtTimer(s) { return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`; }
+function revokeDraftUrl() { if (tiktokDraftUrl) { URL.revokeObjectURL(tiktokDraftUrl); tiktokDraftUrl = null; } }
 
-function teardownWallCamera() {
-  if (wallMediaRecorder && wallMediaRecorder.state !== 'inactive') {
-    try { wallMediaRecorder.stop(); } catch (_) {}
-  }
-  wallMediaRecorder = null;
-  wallRecordedChunks = [];
-  if (wallCameraStream) {
-    wallCameraStream.getTracks().forEach(t => t.stop());
-    wallCameraStream = null;
-  }
-  const v = document.getElementById('wallPreviewVideo');
-  if (v) v.srcObject = null;
-  const row = document.getElementById('cameraRecordRow');
-  const ind = document.getElementById('recordingIndicator');
-  const btnStart = document.getElementById('btnStartRecord');
-  const btnStop = document.getElementById('btnStopRecord');
-  if (row) row.hidden = true;
-  if (ind) ind.classList.remove('is-live');
-  if (btnStart) { btnStart.disabled = true; }
-  if (btnStop) { btnStop.disabled = true; }
-}
-
-function revokeWallDraftPreview() {
-  if (wallDraftPreviewUrl) {
-    URL.revokeObjectURL(wallDraftPreviewUrl);
-    wallDraftPreviewUrl = null;
-  }
-}
-
-function setWallPublishEnabled(on) {
-  const b = document.getElementById('btnPublishVideo');
-  if (b) b.disabled = !on;
-}
-
-function updateWallPreviewShell(hasVideo) {
-  const shell = document.getElementById('videoPreviewShell');
-  if (shell) shell.classList.toggle('has-video', !!hasVideo);
-}
-
-function resetWallVideoDraft() {
-  teardownWallCamera();
-  revokeWallDraftPreview();
-  wallDraftBlob = null;
-  const v = document.getElementById('wallPreviewVideo');
-  const fi = document.getElementById('videoFileInput');
-  if (v) {
-    v.pause();
-    v.removeAttribute('src');
-    v.load();
-    v.muted = true;
-  }
-  if (fi) fi.value = '';
-  updateWallPreviewShell(false);
-  setWallPublishEnabled(false);
-  const btnCam = document.getElementById('btnOpenCamera');
-  const btnPick = document.getElementById('btnPickVideo');
-  if (btnCam) btnCam.disabled = false;
-  if (btnPick) btnPick.disabled = false;
+/* ---- Overlay TikTok ---- */
+function openTiktokOverlay() {
+  document.getElementById('tiktokOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  showRecordControls();
   refreshLucideIcons();
 }
-
-function attachWallDraftBlob(blob) {
-  if (!blob || !blob.size) return;
-  wallDraftBlob = blob;
-  revokeWallDraftPreview();
-  wallDraftPreviewUrl = URL.createObjectURL(blob);
-  const v = document.getElementById('wallPreviewVideo');
-  if (!v) return;
-  v.srcObject = null;
-  v.src = wallDraftPreviewUrl;
-  v.muted = false;
-  v.controls = true;
-  updateWallPreviewShell(true);
-  setWallPublishEnabled(true);
+function closeTiktokOverlay() {
+  stopTiktokStream();
+  revokeDraftUrl();
+  tiktokDraftBlob = null;
+  document.getElementById('tiktokOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+  const lv = document.getElementById('tiktokLiveVideo');
+  lv.pause(); lv.srcObject = null; lv.removeAttribute('src'); lv.load();
 }
-
-document.getElementById('btnPickVideo').addEventListener('click', () => {
-  teardownWallCamera();
-  document.getElementById('videoFileInput').click();
-});
-
-document.getElementById('videoFileInput').addEventListener('change', e => {
-  const file = e.target.files && e.target.files[0];
-  if (!file) return;
-  teardownWallCamera();
-  document.getElementById('cameraRecordRow').hidden = true;
-  if (!file.type.startsWith('video/')) {
-    showToast('Choisissez un fichier vidéo.', 'error');
-    e.target.value = '';
-    return;
-  }
-  const mb = file.size / (1024 * 1024);
-  if (mb > WALL_MAX_IMPORT_MB) {
-    showToast(`Vidéo trop volumineuse (max. ${WALL_MAX_IMPORT_MB} Mo).`, 'error');
-    e.target.value = '';
-    return;
-  }
-  attachWallDraftBlob(file);
-});
-
-document.getElementById('btnOpenCamera').addEventListener('click', async () => {
-  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-    showToast('Caméra non disponible sur ce navigateur. Importez une vidéo depuis votre galerie.', 'error');
-    return;
-  }
-  if (typeof MediaRecorder === 'undefined') {
-    showToast('Enregistrement vidéo non supporté ici. Utilisez « Galerie / Fichier ».', 'error');
-    return;
-  }
-  revokeWallDraftPreview();
-  wallDraftBlob = null;
-  setWallPublishEnabled(false);
-  updateWallPreviewShell(false);
-  const v = document.getElementById('wallPreviewVideo');
-  v.pause();
-  v.removeAttribute('src');
-  v.load();
-  teardownWallCamera();
+function showRecordControls() {
+  document.getElementById('tiktokControlsRecord').style.display = 'flex';
+  document.getElementById('tiktokControlsReview').classList.remove('visible');
+  document.getElementById('tiktokRecBadge').classList.remove('is-live');
+  document.getElementById('tiktokShutter').classList.remove('recording');
+  document.getElementById('tiktokTimer').textContent = '0:00';
+  startTiktokCamera();
+}
+function showReviewControls() {
+  document.getElementById('tiktokControlsRecord').style.display = 'none';
+  document.getElementById('tiktokControlsReview').classList.add('visible');
+  refreshLucideIcons();
+}
+async function startTiktokCamera() {
+  stopTiktokStream();
   try {
-    wallCameraStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' }, audio: true });
-    v.srcObject = wallCameraStream;
-    v.muted = true;
-    v.controls = false;
-    await v.play();
-    updateWallPreviewShell(true);
-    document.getElementById('cameraRecordRow').hidden = false;
-    document.getElementById('btnStartRecord').disabled = false;
-    document.getElementById('btnStopRecord').disabled = true;
-    wallRecordMime = pickRecorderMime() || 'video/webm';
-    showToast('Caméra prête. Appuyez sur Enregistrer.', 'success');
+    tiktokStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' }, audio: true });
+    const lv = document.getElementById('tiktokLiveVideo');
+    lv.srcObject = tiktokStream; lv.muted = true; lv.controls = false;
+    await lv.play();
   } catch (err) {
     console.error(err);
-    showToast('Impossible d\'accéder à la caméra (permission ou appareil).', 'error');
-    teardownWallCamera();
+    closeTiktokOverlay();
+    showToast('Impossible d\'acceder a la camera. Verifiez les permissions.', 'error');
   }
+}
+function stopTiktokStream() {
+  if (tiktokMediaRecorder && tiktokMediaRecorder.state !== 'inactive') { try { tiktokMediaRecorder.stop(); } catch (_) {} }
+  tiktokMediaRecorder = null; tiktokChunks = [];
+  if (tiktokStream) { tiktokStream.getTracks().forEach(t => t.stop()); tiktokStream = null; }
+  clearInterval(tiktokTimerInterval); tiktokTimerInterval = null; tiktokElapsed = 0; tiktokRecording = false;
+}
+document.getElementById('tiktokShutter').addEventListener('click', () => {
+  if (!tiktokRecording) startRecording(); else stopRecording();
+});
+function startRecording() {
+  if (!tiktokStream) return;
+  tiktokChunks = [];
+  wallRecordMime = pickRecorderMime() || 'video/webm';
+  try { tiktokMediaRecorder = new MediaRecorder(tiktokStream, wallRecordMime ? { mimeType: wallRecordMime } : {}); }
+  catch (_) { tiktokMediaRecorder = new MediaRecorder(tiktokStream); }
+  tiktokMediaRecorder.ondataavailable = ev => { if (ev.data.size) tiktokChunks.push(ev.data); };
+  tiktokMediaRecorder.onstop = onRecordingStop;
+  tiktokMediaRecorder.start(200);
+  tiktokRecording = true;
+  document.getElementById('tiktokShutter').classList.add('recording');
+  document.getElementById('tiktokRecBadge').classList.add('is-live');
+  tiktokElapsed = 0;
+  tiktokTimerInterval = setInterval(() => { tiktokElapsed++; document.getElementById('tiktokTimer').textContent = fmtTimer(tiktokElapsed); }, 1000);
+}
+function stopRecording() {
+  if (tiktokMediaRecorder && tiktokMediaRecorder.state !== 'inactive') tiktokMediaRecorder.stop();
+  clearInterval(tiktokTimerInterval); tiktokTimerInterval = null; tiktokRecording = false;
+  document.getElementById('tiktokShutter').classList.remove('recording');
+  document.getElementById('tiktokRecBadge').classList.remove('is-live');
+}
+function onRecordingStop() {
+  const mime = (tiktokMediaRecorder && tiktokMediaRecorder.mimeType) || wallRecordMime || 'video/webm';
+  tiktokDraftBlob = new Blob(tiktokChunks, { type: mime });
+  revokeDraftUrl();
+  tiktokDraftUrl = URL.createObjectURL(tiktokDraftBlob);
+  const lv = document.getElementById('tiktokLiveVideo');
+  lv.srcObject = null; lv.src = tiktokDraftUrl; lv.muted = false; lv.controls = true; lv.loop = true;
+  lv.play().catch(() => {});
+  stopTiktokStream();
+  showReviewControls();
+}
+document.getElementById('tiktokBtnCancel').addEventListener('click', closeTiktokOverlay);
+document.getElementById('tiktokBtnRetake').addEventListener('click', () => {
+  revokeDraftUrl(); tiktokDraftBlob = null;
+  const lv = document.getElementById('tiktokLiveVideo');
+  lv.pause(); lv.removeAttribute('src'); lv.load(); lv.muted = true; lv.controls = false;
+  showRecordControls();
+});
+document.getElementById('tiktokBtnNext').addEventListener('click', () => {
+  if (!tiktokDraftBlob) return;
+  document.getElementById('publishPreviewVideo').src = tiktokDraftUrl;
+  document.getElementById('publishPreviewVideo').load();
+  closeTiktokOverlay();
+  openPublishModal();
+});
+document.getElementById('btnOpenCamera').addEventListener('click', async () => {
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { showToast('Camera non disponible sur ce navigateur.', 'error'); return; }
+  if (typeof MediaRecorder === 'undefined') { showToast('Enregistrement video non supporte sur ce navigateur.', 'error'); return; }
+  openTiktokOverlay();
 });
 
-document.getElementById('btnStartRecord').addEventListener('click', () => {
-  if (!wallCameraStream) return;
-  wallRecordedChunks = [];
-  try {
-    const opts = wallRecordMime ? { mimeType: wallRecordMime } : {};
-    wallMediaRecorder = new MediaRecorder(wallCameraStream, opts);
-  } catch (_) {
-    wallMediaRecorder = new MediaRecorder(wallCameraStream);
-  }
-  wallMediaRecorder.ondataavailable = ev => { if (ev.data.size) wallRecordedChunks.push(ev.data); };
-  wallMediaRecorder.onstop = () => {
-    const mime = wallMediaRecorder.mimeType || wallRecordMime || 'video/webm';
-    const blob = new Blob(wallRecordedChunks, { type: mime });
-    teardownWallCamera();
-    attachWallDraftBlob(blob);
-    refreshLucideIcons();
-  };
-  wallMediaRecorder.start(200);
-  document.getElementById('btnStartRecord').disabled = true;
-  document.getElementById('btnStopRecord').disabled = false;
-  document.getElementById('recordingIndicator').classList.add('is-live');
+/* ---- Modale de publication ---- */
+function openPublishModal() {
+  document.getElementById('publishModalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  refreshLucideIcons();
+}
+function closePublishModal() {
+  document.getElementById('publishModalOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+  const pv = document.getElementById('publishPreviewVideo');
+  pv.pause(); pv.removeAttribute('src'); pv.load();
+}
+document.getElementById('publishModalClose').addEventListener('click', closePublishModal);
+document.getElementById('publishModalCancel').addEventListener('click', closePublishModal);
+document.getElementById('publishModalOverlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('publishModalOverlay')) closePublishModal();
 });
-
-document.getElementById('btnStopRecord').addEventListener('click', () => {
-  if (wallMediaRecorder && wallMediaRecorder.state !== 'inactive') wallMediaRecorder.stop();
-  document.getElementById('recordingIndicator').classList.remove('is-live');
-  document.getElementById('cameraRecordRow').hidden = true;
-});
-
-document.getElementById('btnResetVideoDraft').addEventListener('click', () => {
-  resetWallVideoDraft();
-  showToast('Brouillon effacé.', 'success');
-});
-
 document.getElementById('btnPublishVideo').addEventListener('click', async () => {
-  if (!wallDraftBlob) {
-    showToast('Ajoutez ou enregistrez une vidéo d\'abord.', 'error');
-    return;
-  }
+  if (!tiktokDraftBlob) { showToast('Aucune video a publier.', 'error'); return; }
   const name = (document.getElementById('videoAuthorName').value || '').trim() || 'Anonyme';
   const id = crypto.randomUUID ? crypto.randomUUID() : `v-${Date.now()}-${Math.random().toString(36).slice(2)}`;
   const createdAt = Date.now();
-  const rec = { id, blob: wallDraftBlob, name, createdAt, likes: 0, mime: wallDraftBlob.type || wallRecordMime };
+  const rec = { id, blob: tiktokDraftBlob, name, createdAt, likes: 0, mime: tiktokDraftBlob.type || wallRecordMime };
   try {
     await wallSaveRecord(rec);
-    wallVideoBlobs.set(id, wallDraftBlob);
-    prependWallVideoCard(rec, URL.createObjectURL(wallDraftBlob));
-    resetWallVideoDraft();
+    wallVideoBlobs.set(id, tiktokDraftBlob);
+    prependWallVideoCard(rec, URL.createObjectURL(tiktokDraftBlob));
     removeWallEmptyState();
-    showToast('Votre vidéo hommage est publiée.', 'success');
+    closePublishModal();
+    revokeDraftUrl(); tiktokDraftBlob = null;
+    document.getElementById('videoAuthorName').value = '';
+    showToast('Votre video hommage est publiee.', 'success');
     document.getElementById('wallFeed').scrollTop = 0;
     refreshLucideIcons();
   } catch (err) {
     console.error(err);
-    showToast('Erreur d\'enregistrement local (stockage plein ou privé).', 'error');
+    showToast('Erreur d\'enregistrement local.', 'error');
   }
 });
 
-function removeWallEmptyState() {
-  const el = document.getElementById('wallFeedEmpty');
-  if (el) el.remove();
-}
-
+/* ---- Feed ---- */
+function removeWallEmptyState() { const el = document.getElementById('wallFeedEmpty'); if (el) el.remove(); }
 function renderWallEmptyState() {
   const feed = document.getElementById('wallFeed');
   if (!feed.querySelector('.video-card')) {
-    feed.innerHTML = `
-      <div class="wall-empty" id="wallFeedEmpty">
-        <i data-lucide="video"></i>
-        <p>Aucune vidéo pour le moment. Soyez le premier à poster un hommage vidéo pour vos parents.</p>
-      </div>`;
+    feed.innerHTML = '<div class="wall-empty" id="wallFeedEmpty"><i data-lucide="video"></i><p>Aucune video pour le moment. Soyez le premier a poster un hommage video pour vos parents.</p></div>';
     refreshLucideIcons();
   }
 }
-
 function prependWallVideoCard(rec, objectUrl) {
   const card = buildWallVideoCardElement(rec, objectUrl);
   const feed = document.getElementById('wallFeed');
   removeWallEmptyState();
   feed.insertBefore(card, feed.firstChild);
 }
-
 function buildWallVideoCardElement(rec, objectUrl) {
   const card = document.createElement('div');
   card.className = 'video-card';
@@ -1319,12 +1317,10 @@ function buildWallVideoCardElement(rec, objectUrl) {
   const safeName = (rec.name || 'Anonyme').replace(/</g, '&lt;').replace(/&/g, '&amp;');
   card.innerHTML = `
     <div class="video-card-header">
-      <span class="video-homage-badge">Hommage à mes parents</span>
+      <span class="video-homage-badge">Hommage a mes parents</span>
       <span class="message-time"><i data-lucide="clock"></i> ${wallTimeLabel(rec.createdAt)}</span>
     </div>
-    <div class="video-card-media">
-      <video controls playsinline preload="metadata" src="${objectUrl}"></video>
-    </div>
+    <div class="video-card-media"><video controls playsinline preload="metadata" src="${objectUrl}"></video></div>
     <div class="message-author">${safeName}</div>
     <div class="message-actions">
       <button type="button" class="msg-action-btn like-btn" data-video-id="${rec.id}">
@@ -1333,7 +1329,7 @@ function buildWallVideoCardElement(rec, objectUrl) {
       <div class="share-dropdown">
         <button type="button" class="msg-share-btn"><i data-lucide="share-2"></i> Partager</button>
         <div class="share-menu">
-          <div class="share-option" data-share="native"><i data-lucide="share"></i> Partager la vidéo…</div>
+          <div class="share-option" data-share="copy"><i data-lucide="link"></i> Copier le lien</div>
           <div class="share-option" data-share="whatsapp"><i data-lucide="message-circle"></i> WhatsApp</div>
           <div class="share-option" data-share="facebook"><i data-lucide="facebook"></i> Facebook</div>
         </div>
@@ -1341,63 +1337,37 @@ function buildWallVideoCardElement(rec, objectUrl) {
     </div>`;
   card.querySelector('.like-btn').addEventListener('click', function () { toggleWallVideoLike(this); });
   card.querySelector('.msg-share-btn').addEventListener('click', function () { toggleShare(this); });
-  card.querySelectorAll('.share-option').forEach(opt => {
-    opt.addEventListener('click', () => wallShareVideo(rec.id, opt.dataset.share));
-  });
+  card.querySelectorAll('.share-option').forEach(opt => { opt.addEventListener('click', () => wallShareVideo(rec.id, opt.dataset.share)); });
   return card;
 }
-
 async function toggleWallVideoLike(btn) {
   const id = btn.dataset.videoId;
   const countEl = btn.querySelector('.like-count');
   const liked = btn.classList.toggle('liked');
   let n = parseInt(countEl.textContent, 10) || 0;
-  n += liked ? 1 : -1;
-  countEl.textContent = Math.max(0, n);
-  try {
-    await wallUpdateLikes(id, n);
-  } catch (_) {}
+  n += liked ? 1 : -1; countEl.textContent = Math.max(0, n);
+  try { await wallUpdateLikes(id, n); } catch (_) {}
 }
-
 async function wallShareVideo(videoId, channel) {
   document.querySelectorAll('.share-menu.open').forEach(m => m.classList.remove('open'));
-  const blob = wallVideoBlobs.get(videoId);
-  const line = encodeURIComponent('Vidéo hommage à mes parents — Benin Fathers-Mothers #BéninFamille https://beninfathersmothers.org');
-  if (channel === 'native' && blob && navigator.share) {
-    try {
-      const ext = (blob.type || '').includes('mp4') ? 'mp4' : 'webm';
-      const file = new File([blob], `hommage-parents.${ext}`, { type: blob.type || 'video/webm' });
-      if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({ files: [file], title: 'Hommage à mes parents', text: 'Vidéo hommage — Benin Fathers-Mothers' });
-        return;
-      }
-    } catch (_) {}
-  }
-  if (channel === 'whatsapp') {
-    window.open(`https://wa.me/?text=${line}`, '_blank');
+  const siteUrl = 'https://beninfathersmothers.org';
+  const line = encodeURIComponent('Video hommage a mes parents - Benin Fathers-Mothers #BeninFamille ' + siteUrl);
+  if (channel === 'copy') {
+    try { await navigator.clipboard.writeText(siteUrl); showToast('Lien copie dans le presse-papiers.', 'success'); }
+    catch (_) { showToast('Impossible de copier le lien.', 'error'); }
     return;
   }
-  if (channel === 'facebook') {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://beninfathersmothers.org')}&quote=${line}`, '_blank');
-    return;
-  }
-  if (channel === 'native') {
-    showToast('Partage système indisponible. Utilisez WhatsApp ou Facebook.', 'error');
-  }
+  if (channel === 'whatsapp') { window.open('https://wa.me/?text=' + line, '_blank'); return; }
+  if (channel === 'facebook') { window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(siteUrl) + '&quote=' + line, '_blank'); return; }
 }
-
 function toggleShare(btn) {
   const menu = btn.nextElementSibling;
   document.querySelectorAll('.share-menu.open').forEach(m => { if (m !== menu) m.classList.remove('open'); });
   menu.classList.toggle('open');
 }
-
 document.addEventListener('click', e => {
-  if (!e.target.closest('.share-dropdown')) {
-    document.querySelectorAll('.share-menu.open').forEach(m => m.classList.remove('open'));
-  }
+  if (!e.target.closest('.share-dropdown')) document.querySelectorAll('.share-menu.open').forEach(m => m.classList.remove('open'));
 });
-
 (async function initWallVideoFeed() {
   try {
     await openWallVideoDB();
@@ -1405,17 +1375,10 @@ document.addEventListener('click', e => {
     all.sort((a, b) => b.createdAt - a.createdAt);
     const feed = document.getElementById('wallFeed');
     feed.innerHTML = '';
-    all.forEach(rec => {
-      wallVideoBlobs.set(rec.id, rec.blob);
-      const url = URL.createObjectURL(rec.blob);
-      feed.appendChild(buildWallVideoCardElement(rec, url));
-    });
+    all.forEach(rec => { wallVideoBlobs.set(rec.id, rec.blob); feed.appendChild(buildWallVideoCardElement(rec, URL.createObjectURL(rec.blob))); });
     if (!all.length) renderWallEmptyState();
     refreshLucideIcons();
-  } catch (err) {
-    console.error(err);
-    renderWallEmptyState();
-  }
+  } catch (err) { console.error(err); renderWallEmptyState(); }
 })();
 
 // ===== NEWSLETTER =====
