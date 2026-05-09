@@ -1175,10 +1175,12 @@ function openTiktokOverlay() {
   showRecordControls();
   refreshLucideIcons();
 }
-function closeTiktokOverlay() {
+function closeTiktokOverlay(keepDraft = false) {
   stopTiktokStream();
-  revokeDraftUrl();
-  tiktokDraftBlob = null;
+  if (!keepDraft) {
+    revokeDraftUrl();
+    tiktokDraftBlob = null;
+  }
   document.getElementById('tiktokOverlay').classList.remove('active');
   document.body.style.overflow = '';
   const lv = document.getElementById('tiktokLiveVideo');
@@ -1265,7 +1267,7 @@ document.getElementById('tiktokBtnNext').addEventListener('click', () => {
   if (!tiktokDraftBlob) return;
   document.getElementById('publishPreviewVideo').src = tiktokDraftUrl;
   document.getElementById('publishPreviewVideo').load();
-  closeTiktokOverlay();
+  closeTiktokOverlay(true); // Garder le draft pour la publication
   openPublishModal();
 });
 document.getElementById('btnOpenCamera').addEventListener('click', async () => {
@@ -1280,11 +1282,16 @@ function openPublishModal() {
   document.body.style.overflow = 'hidden';
   refreshLucideIcons();
 }
-function closePublishModal() {
+function closePublishModal(cleanDraft = true) {
   document.getElementById('publishModalOverlay').classList.remove('active');
   document.body.style.overflow = '';
   const pv = document.getElementById('publishPreviewVideo');
   pv.pause(); pv.removeAttribute('src'); pv.load();
+  // Nettoyer le draft si l'utilisateur annule (pas si on publie)
+  if (cleanDraft) {
+    revokeDraftUrl();
+    tiktokDraftBlob = null;
+  }
 }
 document.getElementById('publishModalClose').addEventListener('click', closePublishModal);
 document.getElementById('publishModalCancel').addEventListener('click', closePublishModal);
@@ -1302,8 +1309,8 @@ document.getElementById('btnPublishVideo').addEventListener('click', async () =>
     wallVideoBlobs.set(id, tiktokDraftBlob);
     prependWallVideoCard(rec, URL.createObjectURL(tiktokDraftBlob));
     removeWallEmptyState();
-    closePublishModal();
-    revokeDraftUrl(); tiktokDraftBlob = null;
+    closePublishModal(false); // Ne pas nettoyer le draft dans closePublishModal
+    revokeDraftUrl(); tiktokDraftBlob = null; // On le nettoie ici
     document.getElementById('videoAuthorName').value = '';
     showToast('Votre video hommage est publiee.', 'success');
     document.getElementById('wallFeed').scrollTop = 0;
