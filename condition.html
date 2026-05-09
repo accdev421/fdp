@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions d'Utilisation | Benin Fathers-Mothers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<style>
+  :root {
+    --green: #27ae60;
+    --green-light: #2ecc71;
+    --green-dark: #1e8449;
+    --red: #e74c3c;
+    --blue: #2c3e50;
+    --blue-light: #34495e;
+    --white: #ffffff;
+    --off-white: #fafaf8;
+    --gray-light: #f5f4f0;
+    --gray: #888;
+    --shadow-sm: 0 2px 12px rgba(0,0,0,0.07);
+    --shadow-md: 0 8px 32px rgba(0,0,0,0.10);
+    --radius: 20px;
+    --radius-sm: 12px;
+    --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--blue); overflow-x: hidden; line-height: 1.7; }
+  a { text-decoration: none; color: inherit; }
+  
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  
+  /* NAVBAR */
+  #navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 18px 0;
+    background: rgba(255,255,255,0.97);
+    box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+    backdrop-filter: blur(8px);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo-text { font-family: 'Playfair Display', serif; }
+  .nav-logo-text span:first-child { display: block; font-size: 1rem; font-weight: 900; color: var(--blue); line-height: 1; }
+  .nav-logo-text span:last-child { font-size: 0.7rem; color: var(--green); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 36px; }
+  .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--blue); transition: color 0.2s; position: relative; }
+  .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--green); border-radius: 2px; transition: width 0.3s; }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-links a:hover { color: var(--green); }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+  .hamburger span { display: block; width: 26px; height: 2.5px; background: var(--blue); border-radius: 4px; transition: var(--transition); }
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--blue); z-index: 1001; flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: white; }
+  .mobile-close { position: absolute; top: 24px; right: 28px; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .mobile-close svg { width: 1.75rem; height: 1.75rem; stroke: white; stroke-width: 2; }
+
+  /* CONTENT */
+  .policy-content { padding: 140px 0 80px; background: var(--off-white); min-height: 100vh; }
+  .policy-header { text-align: center; margin-bottom: 60px; }
+  .policy-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--blue); margin-bottom: 16px; }
+  .policy-header p { color: var(--gray); font-size: 1rem; }
+  .policy-body { background: white; border-radius: var(--radius); padding: 60px; box-shadow: var(--shadow-sm); max-width: 900px; margin: 0 auto; }
+  .policy-body h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--blue); margin-top: 40px; margin-bottom: 20px; }
+  .policy-body h2:first-child { margin-top: 0; }
+  .policy-body h3 { font-size: 1.3rem; font-weight: 600; color: var(--blue-light); margin-top: 30px; margin-bottom: 15px; }
+  .policy-body p { margin-bottom: 16px; color: var(--blue-light); }
+  .policy-body ul { margin-left: 24px; margin-bottom: 16px; }
+  .policy-body li { margin-bottom: 8px; color: var(--blue-light); }
+  .policy-body strong { color: var(--blue); font-weight: 600; }
+  .policy-body a { color: var(--green); text-decoration: underline; }
+  .policy-body a:hover { color: var(--green-dark); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .policy-body { padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobileMenu">
+  <button type="button" class="mobile-close" onclick="closeMobileMenu()" aria-label="Fermer le menu"><i data-lucide="x"></i></button>
+  <a href="index.html">Accueil</a>
+  <a href="index.html#about" onclick="closeMobileMenu()">À Propos</a>
+  <a href="index.html#wall" onclick="closeMobileMenu()">Vidéos du Cœur</a>
+</nav>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-text">
+          <span>Benin Fathers-Mothers</span>
+          <span>Célébrons nos parents</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#about">À Propos</a></li>
+        <li><a href="index.html#wall">Vidéos du Cœur</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- POLICY CONTENT -->
+<section class="policy-content">
+  <div class="container">
+    <div class="policy-header">
+      <h1>Conditions d'Utilisation</h1>
+      <p>Dernière mise à jour : 9 mai 2026</p>
+    </div>
+
+    <div class="policy-body">
+      <p>Bienvenue sur <strong>Benin Fathers-Mothers</strong>. En accédant et en utilisant notre plateforme, vous acceptez d'être lié par les présentes conditions d'utilisation. Veuillez les lire attentivement.</p>
+
+      <h2>1. Acceptation des conditions</h2>
+      <p>En utilisant notre plateforme, vous confirmez que :</p>
+      <ul>
+        <li>Vous avez au moins 16 ans ou avez l'autorisation d'un parent/tuteur</li>
+        <li>Vous acceptez de respecter ces conditions d'utilisation</li>
+        <li>Vous acceptez notre <a href="confidentialite.html">Politique de Confidentialité</a></li>
+        <li>Vous vous engagez à utiliser la plateforme de manière responsable et légale</li>
+      </ul>
+
+      <h2>2. Description du service</h2>
+      <p>Benin Fathers-Mothers est une plateforme dédiée à la célébration des parents à travers :</p>
+      <ul>
+        <li>La publication de vidéos hommages</li>
+        <li>Le partage de messages et témoignages</li>
+        <li>La participation aux célébrations de la Fête des Mères et des Pères</li>
+        <li>L'accès à des ressources et informations sur nos événements</li>
+      </ul>
+
+      <h2>3. Compte utilisateur</h2>
+      
+      <h3>3.1 Création de compte</h3>
+      <p>Pour publier du contenu, vous devez fournir des informations exactes et à jour. Vous êtes responsable de maintenir la confidentialité de vos identifiants de connexion.</p>
+
+      <h3>3.2 Responsabilité du compte</h3>
+      <ul>
+        <li>Vous êtes responsable de toutes les activités effectuées via votre compte</li>
+        <li>Vous devez nous informer immédiatement de toute utilisation non autorisée</li>
+        <li>Nous ne sommes pas responsables des pertes résultant d'une utilisation non autorisée de votre compte</li>
+      </ul>
+
+      <h2>4. Contenu utilisateur</h2>
+      
+      <h3>4.1 Votre contenu</h3>
+      <p>Vous conservez tous les droits sur le contenu que vous publiez. En publiant sur notre plateforme, vous nous accordez une licence mondiale, non exclusive, gratuite pour :</p>
+      <ul>
+        <li>Afficher, reproduire et distribuer votre contenu sur la plateforme</li>
+        <li>Utiliser votre contenu à des fins promotionnelles (avec votre consentement explicite)</li>
+        <li>Modérer et supprimer le contenu qui viole nos règles</li>
+      </ul>
+
+      <h3>4.2 Règles de contenu</h3>
+      <p>Vous vous engagez à ne pas publier de contenu qui :</p>
+      <ul>
+        <li>Est illégal, offensant, diffamatoire ou haineux</li>
+        <li>Viole les droits d'autrui (propriété intellectuelle, vie privée, etc.)</li>
+        <li>Contient des virus, malwares ou codes malveillants</li>
+        <li>Fait la promotion de violence, discrimination ou activités illégales</li>
+        <li>Est pornographique ou sexuellement explicite</li>
+        <li>Constitue du spam ou du contenu commercial non sollicité</li>
+        <li>Usurpe l'identité d'une autre personne</li>
+      </ul>
+
+      <h3>4.3 Modération</h3>
+      <p>Nous nous réservons le droit de :</p>
+      <ul>
+        <li>Examiner, modifier ou supprimer tout contenu à notre discrétion</li>
+        <li>Suspendre ou résilier les comptes qui violent ces conditions</li>
+        <li>Coopérer avec les autorités en cas d'activité illégale</li>
+      </ul>
+
+      <h2>5. Propriété intellectuelle</h2>
+      
+      <h3>5.1 Notre contenu</h3>
+      <p>Tous les éléments de la plateforme (design, logo, textes, graphiques, code) sont protégés par les lois sur la propriété intellectuelle et appartiennent à Benin Fathers-Mothers ou à nos partenaires.</p>
+
+      <h3>5.2 Utilisation autorisée</h3>
+      <p>Vous pouvez utiliser notre plateforme uniquement à des fins personnelles et non commerciales. Toute reproduction, distribution ou modification de notre contenu sans autorisation est interdite.</p>
+
+      <h2>6. Comportement interdit</h2>
+      <p>Vous vous engagez à ne pas :</p>
+      <ul>
+        <li>Utiliser la plateforme à des fins illégales ou non autorisées</li>
+        <li>Tenter d'accéder à des zones restreintes ou aux comptes d'autres utilisateurs</li>
+        <li>Interférer avec le fonctionnement de la plateforme</li>
+        <li>Collecter des données d'autres utilisateurs sans leur consentement</li>
+        <li>Utiliser des robots, scrapers ou outils automatisés</li>
+        <li>Créer de faux comptes ou usurper l'identité d'autrui</li>
+        <li>Harceler, menacer ou intimider d'autres utilisateurs</li>
+      </ul>
+
+      <h2>7. Limitation de responsabilité</h2>
+      
+      <h3>7.1 Service "tel quel"</h3>
+      <p>Notre plateforme est fournie "en l'état" sans garantie d'aucune sorte. Nous ne garantissons pas que :</p>
+      <ul>
+        <li>Le service sera ininterrompu ou sans erreur</li>
+        <li>Les défauts seront corrigés</li>
+        <li>Le contenu sera exact ou fiable</li>
+      </ul>
+
+      <h3>7.2 Exclusion de responsabilité</h3>
+      <p>Dans la mesure permise par la loi, nous ne sommes pas responsables de :</p>
+      <ul>
+        <li>Pertes de données ou dommages résultant de l'utilisation de la plateforme</li>
+        <li>Contenu publié par les utilisateurs</li>
+        <li>Actions ou omissions de tiers</li>
+        <li>Interruptions de service ou problèmes techniques</li>
+      </ul>
+
+      <h2>8. Indemnisation</h2>
+      <p>Vous acceptez d'indemniser et de dégager Benin Fathers-Mothers de toute responsabilité concernant les réclamations, pertes ou dommages résultant de :</p>
+      <ul>
+        <li>Votre utilisation de la plateforme</li>
+        <li>Votre violation de ces conditions</li>
+        <li>Votre violation des droits d'autrui</li>
+        <li>Le contenu que vous publiez</li>
+      </ul>
+
+      <h2>9. Résiliation</h2>
+      
+      <h3>9.1 Par vous</h3>
+      <p>Vous pouvez cesser d'utiliser notre plateforme à tout moment. Pour supprimer votre compte, contactez-nous à <a href="mailto:support@beninfathersmothers.org">support@beninfathersmothers.org</a>.</p>
+
+      <h3>9.2 Par nous</h3>
+      <p>Nous pouvons suspendre ou résilier votre accès immédiatement, sans préavis, si :</p>
+      <ul>
+        <li>Vous violez ces conditions d'utilisation</li>
+        <li>Votre comportement nuit à la plateforme ou à d'autres utilisateurs</li>
+        <li>Nous sommes légalement tenus de le faire</li>
+        <li>Nous cessons d'exploiter la plateforme</li>
+      </ul>
+
+      <h2>10. Modifications des conditions</h2>
+      <p>Nous nous réservons le droit de modifier ces conditions à tout moment. Les modifications importantes seront notifiées par :</p>
+      <ul>
+        <li>Publication sur cette page avec mise à jour de la date</li>
+        <li>Notification par e-mail (si applicable)</li>
+        <li>Bannière d'information sur la plateforme</li>
+      </ul>
+      <p>Votre utilisation continue de la plateforme après les modifications constitue votre acceptation des nouvelles conditions.</p>
+
+      <h2>11. Droit applicable et juridiction</h2>
+      <p>Ces conditions sont régies par les lois de la République du Bénin. Tout litige sera soumis à la juridiction exclusive des tribunaux de Cotonou, Bénin.</p>
+
+      <h2>12. Dispositions générales</h2>
+      
+      <h3>12.1 Intégralité de l'accord</h3>
+      <p>Ces conditions constituent l'intégralité de l'accord entre vous et Benin Fathers-Mothers concernant l'utilisation de la plateforme.</p>
+
+      <h3>12.2 Divisibilité</h3>
+      <p>Si une disposition de ces conditions est jugée invalide, les autres dispositions restent en vigueur.</p>
+
+      <h3>12.3 Renonciation</h3>
+      <p>Notre non-exercice d'un droit ne constitue pas une renonciation à ce droit.</p>
+
+      <h2>13. Contact</h2>
+      <p>Pour toute question concernant ces conditions d'utilisation :</p>
+      <ul>
+        <li><strong>Email :</strong> <a href="mailto:legal@beninfathersmothers.org">legal@beninfathersmothers.org</a></li>
+        <li><strong>Adresse :</strong> Benin Fathers-Mothers, Cotonou, Bénin</li>
+      </ul>
+
+      <p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e8e8e4; color: var(--gray); font-size: 0.9rem;">
+        En utilisant Benin Fathers-Mothers, vous reconnaissez avoir lu, compris et accepté ces conditions d'utilisation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  lucide.createIcons();
+  
+  function toggleMobileMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  }
+  
+  function closeMobileMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+</script>
+
+</body>
+</html>

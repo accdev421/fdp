@@ -94,11 +94,12 @@
   .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--blue); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--blue); z-index: 1001; flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
   .mobile-menu.open { display: flex; }
   .mobile-menu a { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: white; }
   .mobile-menu a:hover { color: var(--green-light); }
-  .mobile-close { position: absolute; top: 24px; right: 28px; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; }
+  .mobile-close { position: absolute; top: 24px; right: 28px; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .mobile-close svg { width: 1.75rem; height: 1.75rem; stroke: white; stroke-width: 2; }
 
   /* ===== HERO ===== */
   #hero {
@@ -434,8 +435,6 @@
   .footer-newsletter-text h4.icon-heading svg { width: 1.25rem; height: 1.25rem; stroke: var(--green-light); flex-shrink: 0; }
   .footer-bottom-heart-inline { display: inline-flex; align-items: center; gap: 5px; }
   .footer-bottom-heart-inline svg { width: 0.9rem; height: 0.9rem; stroke: rgba(255,255,255,0.45); fill: rgba(231,76,60,0.35); }
-  .mobile-close { display: flex; align-items: center; justify-content: center; }
-  .mobile-close svg { width: 1.75rem; height: 1.75rem; stroke: white; stroke-width: 2; }
   .message-time { display: inline-flex; align-items: center; gap: 6px; }
   .message-time svg { width: 0.85rem; height: 0.85rem; stroke: var(--gray); flex-shrink: 0; }
   .like-btn, .msg-share-btn { display: inline-flex; align-items: center; gap: 6px; }
@@ -940,11 +939,11 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2024 Benin Fathers-Mothers. Fait avec <span class="footer-bottom-heart-inline"><i data-lucide="heart"></i></span> au Bénin.</p>
+      <p>© 2024 Benin Fathers-Mothers, tous droits réservés.</p>
       <div class="footer-bottom-links">
-        <a href="#">Confidentialité</a>
-        <a href="#">Conditions</a>
-        <a href="#">Cookies</a>
+        <a href="confidentialite.html">Confidentialité</a>
+        <a href="condition.html">Conditions</a>
+        <a href="cookies.html">Cookies</a>
       </div>
     </div>
   </div>
